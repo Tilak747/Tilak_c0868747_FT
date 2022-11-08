@@ -24,6 +24,10 @@ class ProgressViewController: UIViewController {
         progressTableView.reloadData()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        delegate?.startGame()
+    }
+    
 }
 
 class ProgressViewCell: UITableViewCell {

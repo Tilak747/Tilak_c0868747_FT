@@ -13,9 +13,12 @@ class ViewController: UIViewController {
     var currentNumber = 0
     var lastNumber : Int? = nil
     
+    var score = 0
+    
     
     var myProgress:Array<GameModel> = []
 
+    @IBOutlet weak var labelScore: UILabel!
     @IBOutlet weak var labelDisplayNumber: UILabel!
     
     @IBOutlet weak var btnEven: UIButton!
@@ -50,12 +53,13 @@ class ViewController: UIViewController {
         if lastNumber == newNum {
             startGame()
         }
-        else {
+        else{
             currentNumber = newNum
+            
+            labelDisplayNumber.text = "\(currentNumber)"
+            ivResult.isHidden = true
         }
         
-        labelDisplayNumber.text = "\(currentNumber)"
-        ivResult.isHidden = true
         
     }
     func displayCurrentNumber(){
@@ -66,11 +70,13 @@ class ViewController: UIViewController {
     @IBAction func chooseOdd(_ sender: Any) {
         
         let isEven = checkOddEven(num: currentNumber)
-        updateProgress(num: currentNumber, input: false, output: isEven)
+        
+        updateProgress(num: currentNumber, input: false, output: !isEven)
         
     }
     @IBAction func chooseEven(_ sender: Any) {
         let isEven = checkOddEven(num: currentNumber)
+        
         updateProgress(num: currentNumber, input: true, output: isEven)
     }
     
@@ -79,13 +85,29 @@ class ViewController: UIViewController {
     }
     
     func resetGame(){
+        resetScore()
+        updateScoreValue()
+        
         currentNumber = 0
         lastNumber = nil
         myProgress = []
         ivResult.isHidden = true
     }
     
+    func resetScore(){
+        score = 0
+    }
+    func updateScoreValue(){
+        labelScore.text = "Score : \(score)"
+    }
+    
+    func addScore(){
+        score += 1
+        updateScoreValue()
+    }
+    
     func updateProgress(num:Int,input:Bool,output:Bool){
+        
         lastNumber = num
         
         let gameModel = GameModel(number: num, myChoice: input, result: output)
@@ -96,6 +118,7 @@ class ViewController: UIViewController {
         if output {
             ivResult.image = UIImage(named: "correct")
             alertMessage = "Congratulations ! Your answer is correct."
+            addScore()
         }
         else{
             ivResult.image = UIImage(named: "incorrect")
