@@ -9,20 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let numList = 1...999
+    let numList = 1...3
     var currentNumber = 0
     var lastNumber : Int? = nil
     
-    struct GameModel{
-        var number:Int
-        var myChoice:Bool
-        var result:Bool
-        init(number: Int, myChoice: Bool, result: Bool) {
-            self.number = number
-            self.myChoice = myChoice
-            self.result = result
-        }
-    }
+    
     var myProgress:Array<GameModel> = []
 
     @IBOutlet weak var labelDisplayNumber: UILabel!
@@ -136,7 +127,12 @@ class ViewController: UIViewController {
     
     
     func showProgress(progress:Array<GameModel>){
-        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Progress") as! ProgressViewController
+        nextViewController.delegate = self
+        nextViewController.myProgress = progress
+        self.present(nextViewController, animated: true)
+
     }
 }
 

@@ -13,6 +13,8 @@
 		4184A1272919CC85004B0936 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4184A1252919CC85004B0936 /* Main.storyboard */; };
 		4184A1292919CC87004B0936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4184A1282919CC87004B0936 /* Assets.xcassets */; };
 		4184A12C2919CC87004B0936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4184A12A2919CC87004B0936 /* LaunchScreen.storyboard */; };
+		4184A1342919D670004B0936 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4184A1332919D670004B0936 /* ProgressViewController.swift */; };
+		4184A1362919D6C8004B0936 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4184A1352919D6C8004B0936 /* GameModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4184A1282919CC87004B0936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4184A12B2919CC87004B0936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4184A12D2919CC87004B0936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4184A1332919D670004B0936 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		4184A1352919D6C8004B0936 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				4184A1282919CC87004B0936 /* Assets.xcassets */,
 				4184A12A2919CC87004B0936 /* LaunchScreen.storyboard */,
 				4184A12D2919CC87004B0936 /* Info.plist */,
+				4184A1332919D670004B0936 /* ProgressViewController.swift */,
+				4184A1352919D6C8004B0936 /* GameModel.swift */,
 			);
 			path = Tilak_c0868747_FT;
 			sourceTree = "<group>";
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4184A1362919D6C8004B0936 /* GameModel.swift in Sources */,
 				4184A1242919CC85004B0936 /* ViewController.swift in Sources */,
 				4184A1202919CC85004B0936 /* AppDelegate.swift in Sources */,
 				4184A1222919CC85004B0936 /* SceneDelegate.swift in Sources */,
+				4184A1342919D670004B0936 /* ProgressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
