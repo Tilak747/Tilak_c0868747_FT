@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let numList = 1...3
+    let numList = 1...999
     var currentNumber = 0
     var lastNumber : Int? = nil
     
@@ -34,6 +34,18 @@ class ViewController: UIViewController {
         startGame()
     }
     
+    @IBAction func resetGame(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Reset Game", message: "Are you sure ?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes!", style: .default){
+            _ in
+            self.resetGame()
+            self.startGame()
+        })
+        alert.addAction(UIAlertAction(title: "No!", style: .cancel))
+        present(alert, animated: true)
+        
+    }
     func putBackgroundImage(){
         
         let bg = UIImage(named: "bg_1")

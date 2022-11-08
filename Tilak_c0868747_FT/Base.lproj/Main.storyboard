@@ -77,6 +77,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNx-n5-haF">
+                                <rect key="frame" x="282" y="775" width="68" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="PYT-9h-LEg"/>
+                                    <constraint firstAttribute="height" constant="35" id="TPo-xP-p6I"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Reset">
+                                    <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.55248145273614468" blue="0.59342993663512278" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gd3-9x-Cp9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -92,8 +107,10 @@
                             <constraint firstItem="c0Y-R8-DNS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="QAa-5K-yRB"/>
                             <constraint firstItem="nBP-Wc-3eW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="Qzz-2k-bpI"/>
                             <constraint firstItem="Sf1-2H-KkL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="YUk-s0-s1W"/>
+                            <constraint firstItem="dNx-n5-haF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="e1T-1J-i97"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q1R-PD-SIm" secondAttribute="trailing" constant="37" id="eRf-ZV-55m"/>
                             <constraint firstItem="Sf1-2H-KkL" firstAttribute="top" secondItem="xm1-1d-anO" secondAttribute="bottom" constant="124" id="l6j-Q1-zhY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dNx-n5-haF" secondAttribute="trailing" constant="40" id="pII-ll-kDW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sf1-2H-KkL" secondAttribute="trailing" constant="37" id="rAw-EM-JBi"/>
                             <constraint firstItem="xm1-1d-anO" firstAttribute="top" secondItem="nBP-Wc-3eW" secondAttribute="bottom" constant="59" id="u5i-gu-edg"/>
                             <constraint firstItem="q1R-PD-SIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="wJU-Me-eKT"/>
@@ -216,6 +233,9 @@
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
